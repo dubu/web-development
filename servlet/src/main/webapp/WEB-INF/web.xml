@@ -10,7 +10,16 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/com.dubu.servlet/Hello</url-pattern>
+        <url-pattern>/do/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ModelOneServlet</servlet-name>
+        <servlet-class>com.dubu.servlet.ModelOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModelOneServlet</servlet-name>
+        <url-pattern>/do/search</url-pattern>
     </servlet-mapping>
     
     <filter>
@@ -19,6 +28,6 @@
     </filter>
     <filter-mapping>
         <filter-name>timer</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/do/*</url-pattern>
     </filter-mapping>
 </web-app>

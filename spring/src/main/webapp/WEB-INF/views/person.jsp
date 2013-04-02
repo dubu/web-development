@@ -11,8 +11,10 @@
     <title></title>
   </head>
   <body>
-      HI index home page  2
-      <h1>${name}</h1>
-      <h1>${age}</h1>
+
+  spring
+  <h1> name : ${name}</h1>
+  <h1>age :  ${age} </h1>
+
   </body>
 </html>
