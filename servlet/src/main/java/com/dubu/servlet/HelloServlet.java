@@ -34,7 +34,7 @@ public class HelloServlet extends HttpServlet {
         out.println("<HTML>");
         out.println("   <BODY>");
         out.println("   Welcome *^^*");
-        out.println(model.getName());
+        out.println("<h1 id=\"name\">"+model.getName() +"</h1>");
         out.println("   </BODY>");
         out.println("</HTML>");
         out.close();

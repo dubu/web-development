@@ -11,6 +11,6 @@
   </head>
   <body>
          Welcome *^^*  <BR>
-         <%=model.getMessage()%>
+        <h1 id="name"> <%=model.getMessage()%> </h1>
   </body>
 </html>
