@@ -13,5 +13,12 @@
         <slf4j.version>1.6.1</slf4j.version>
     </properties>
 
+    <dependencies>
+    <dependency>
+        <groupId>aspectj</groupId>
+        <artifactId>aspectjrt</artifactId>
+        <version>1.5.4</version>
+    </dependency>
+    </dependencies>
 
 </project>
