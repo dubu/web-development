@@ -13,8 +13,8 @@
   <body>
 
   spring
-  <h1> name : ${name}</h1>
-  <h1>age :  ${age} </h1>
+  name : <h1 id="name" >${name}</h1>
+  age :  <h1 id="age">${age} </h1>
 
   </body>
 </html>
