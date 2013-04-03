@@ -4,14 +4,14 @@ package com.dubu;
 public aspect HelloFromAspectJ {
 
 
-    long startTime = System.currentTimeMillis();
+    long startTime ;
 
     pointcut mainMethod(): execution(public static void main(String[]));
 
     before(): mainMethod() {
 
         System.out.println("*** start job time ***");
-        long startTime = System.currentTimeMillis();
+        startTime = System.currentTimeMillis();
     }
 
     after() returning : mainMethod() {
