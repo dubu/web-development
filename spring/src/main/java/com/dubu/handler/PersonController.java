@@ -27,4 +27,15 @@ public class PersonController {
         return "/WEB-INF/views/person.jsp";
 
     }
+
+    @RequestMapping("/foo")
+    public String findPersonController() {
+
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "/WEB-INF/views/person.jsp";
+    }
 }
