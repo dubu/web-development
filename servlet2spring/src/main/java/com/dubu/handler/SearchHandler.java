@@ -5,6 +5,7 @@ import com.dubu.service.PersonServiceInMemory;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 
 /**
  * User: Administrator
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class SearchHandler implements Handler {
 
+
+    /*
     @Override
     public String handle(HttpServletRequest req, HttpServletResponse reps) {
 
@@ -23,6 +26,20 @@ public class SearchHandler implements Handler {
 
         req.setAttribute("name", person.getName());
         req.setAttribute("age", person.getAge());
+
+        return "person";
+    }
+    */
+
+    @Override
+    public String handle(Map<String, String[]> params, Map<String, Object> models) {
+        PersonServiceInMemory service = new PersonServiceInMemory();
+
+        int id =  Integer.valueOf(params.get("id")[0]);
+        Person person = service.search(id);
+
+        models.put("name", person.getName());
+        models.put("age", person.getAge());
 
         return "person";
     }
