@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
  * Time: 오후 12:11
  */
 public class TimeFilter implements Filter {
-    //private static final Logger log = LoggerFactory.getLogger(TimeFilter.class);
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -22,7 +21,6 @@ public class TimeFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         long startTime = System.currentTimeMillis();
         filterChain.doFilter(servletRequest,servletResponse );
-        //log.info("process time : " + (System.currentTimeMillis() - startTime) + " ms");
         System.out.println("[filter] process time : " + (System.currentTimeMillis() - startTime) + " ms");
     }
 

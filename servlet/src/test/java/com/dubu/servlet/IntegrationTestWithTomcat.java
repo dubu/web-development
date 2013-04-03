@@ -47,7 +47,7 @@ public class IntegrationTestWithTomcat {
 
     @AfterClass
     public static void tearDown() {
-        System.out.println(browser.getPageSource());
+        //System.out.println(browser.getPageSource());
         browser.close();
         tomcat.stop();
     }
