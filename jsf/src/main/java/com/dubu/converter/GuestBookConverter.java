@@ -24,10 +24,14 @@ public class GuestBookConverter implements Converter{
     public static Map<String, Guest> guests = new HashMap<String, Guest>();
 
     static {
-        guests.put("CC", new Guest("CC", "good2","2008"));
-        guests.put("Golf", new Guest("Golf", "good4", "1974"));
-        guests.put("Jetta", new Guest("Jetta", "good5", "1979"));
-        guests.put("Passat", new Guest("Passat", "good6", "1973"));
+        guests.put("guest01", new Guest("guest01", "good~!","2013-04-11"));
+        guests.put("guest02", new Guest("guest02", "호..", "2013-04-11"));
+        guests.put("guest03", new Guest("guest03", "좋아요.", "2013-04-11"));
+        guests.put("guest04", new Guest("guest04", "멋짐", "2013-04-11"));
+        guests.put("guest05", new Guest("guest05", "짱", "2013-04-11"));
+        guests.put("guest06", new Guest("guest06", "보통", "2013-04-11"));
+        guests.put("guest07", new Guest("guest07", "홋", "2013-04-11"));
+        guests.put("guest08", new Guest("guest08", "주저리 주저리 어쩌구 저쩌구", "2013-04-11"));
 
     }
 

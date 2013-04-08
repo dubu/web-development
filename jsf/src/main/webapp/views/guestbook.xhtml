@@ -5,12 +5,12 @@
                 xmlns:p="http://primefaces.org/ui"
                 template="/templates/masterLayout.xhtml">
     <ui:define name="chapterItem">
-        <h3 style="margin-top:0">In-cell editing with DataTable</h3>
+        <h3 style="margin-top:0">simple guestbook</h3>
         <p:growl id="growl" showDetail="true"/>
 
         <h:panelGrid columns="2" cellpadding="5">
 
-            <h:outputText value="In cell editing" />
+            <h:outputText value="" />
             <p:dataTable id="inCellEditing" var="guest" value="#{guestTableController.guests}" rowKey="#{guest.name}" editable="true">
 
                 <p:ajax event="rowEdit" listener="#{guestTableController.onEdit}" update=":mainForm:growl" />
