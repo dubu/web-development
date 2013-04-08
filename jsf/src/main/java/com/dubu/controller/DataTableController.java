@@ -95,4 +95,6 @@ public class DataTableController implements Serializable {
     public void setSelectedCarsList(List<Car> selectedCarsList) {
         this.selectedCarsList = selectedCarsList;
     }
+
+
 }
