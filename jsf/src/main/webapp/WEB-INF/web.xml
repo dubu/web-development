@@ -17,7 +17,7 @@
 
     <!-- Welcome files -->
     <welcome-file-list>
-        <welcome-file>/views/guestbook.jsf</welcome-file>
+        <welcome-file>/views/dataTableInCellEdit.jsf</welcome-file>
     </welcome-file-list>
 
 </web-app>

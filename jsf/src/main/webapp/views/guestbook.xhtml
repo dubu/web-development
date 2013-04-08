@@ -1,0 +1,56 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                template="/templates/masterLayout.xhtml">
+    <ui:define name="chapterItem">
+        <h3 style="margin-top:0">In-cell editing with DataTable</h3>
+        <p:growl id="growl" showDetail="true"/>
+
+        <h:panelGrid columns="2" cellpadding="5">
+
+            <h:outputText value="In cell editing" />
+            <p:dataTable id="inCellEditing" var="guest" value="#{guestTableController.guests}" rowKey="#{guest.name}" editable="true">
+
+                <p:ajax event="rowEdit" listener="#{guestTableController.onEdit}" update=":mainForm:growl" />
+                <p:ajax event="rowEditCancel" listener="#{guestTableController.onCancel}" update=":mainForm:growl" />
+
+                <p:column headerText="Name">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{guest.name}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{guest.name}" />
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+                <p:column headerText="Message">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{guest.message}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{guest.message}" />
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+                <p:column headerText="date">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{guest.modifiedDate}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{guest.modifiedDate}" />
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+                <p:column headerText="Actions">
+                    <p:rowEditor />
+                </p:column>
+            </p:dataTable>
+
+        </h:panelGrid>
+    </ui:define>
+</ui:composition>
